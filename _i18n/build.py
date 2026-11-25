@@ -45,6 +45,7 @@ JUNK = re.compile(r'^[\s &;#0-9.,:/\-]*$')
 # qui n'en était pas. On le remplace en entier, ce qui rend l'opération
 # idempotente — relancer le script ne l'empile pas.
 SWITCHER_RE = re.compile(r'<div class="foot-langs">.*?</div>', re.S)
+NAV_SWITCHER_RE = re.compile(r'<div class="nav-langs">.*?</div>', re.S)
 
 FOOT_CSS_OLD = u'.foot-langs span{ cursor:default; }'
 FOOT_CSS_NEW = (
@@ -95,8 +96,9 @@ def skip_ranges(html):
             out.append((m.start(), m.end()))
     for m in re.finditer(r'<!--.*?-->', html, re.S):
         out.append((m.start(), m.end()))
-    for m in SWITCHER_RE.finditer(html):
-        out.append((m.start(), m.end()))
+    for rx in (SWITCHER_RE, NAV_SWITCHER_RE):
+        for m in rx.finditer(html):
+            out.append((m.start(), m.end()))
     return out
 
 
@@ -143,12 +145,15 @@ def translate_attrs(html, lang, table, missing):
     return html
 
 
-def build_switcher(active):
+def build_switcher(active, css_class):
+    """Les deux sélecteurs — en-tête et pied de page — sortent d'ici, donc
+    ils ne peuvent pas diverger en ordre ni en destinations."""
     items = []
     for code, _out, _dir, label, url in LANGS:
         cur = u' aria-current="page"' if code == active else u''
-        items.append(u'<a href="%s" hreflang="%s"%s>%s</a>' % (url, code, cur, label))
-    return u'<div class="foot-langs">%s</div>' % u''.join(items)
+        items.append(
+            u'<a href="%s" hreflang="%s"%s>%s</a>' % (url, code, cur, label))
+    return u'<div class="%s">%s</div>' % (css_class, u''.join(items))
 
 
 def main():
@@ -176,8 +181,11 @@ def main():
             html = html.replace(u'href="/suppression-compte"',
                                 u'href="/%s/suppression-compte"' % code)
 
-        # Sélecteur de langue fonctionnel, et son style
-        html = SWITCHER_RE.sub(build_switcher(code), html, count=1)
+        # Les deux sélecteurs de langue : en-tête et pied de page
+        html = NAV_SWITCHER_RE.sub(
+            build_switcher(code, u'nav-langs'), html, count=1)
+        html = SWITCHER_RE.sub(
+            build_switcher(code, u'foot-langs'), html, count=1)
         html = html.replace(FOOT_CSS_OLD, FOOT_CSS_NEW)
 
         if direction == u'rtl':
