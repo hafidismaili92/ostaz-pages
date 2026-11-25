@@ -10,4 +10,15 @@ _i18n/
 # Configuration et documentation du dépôt : rien à publier.
 wrangler.jsonc
 .assetsignore
+.gitignore
 README.md
+
+# L'historique Git : publié, il exposerait tout le dépôt fichier par fichier.
+.git/
+
+# État local de wrangler. À NE JAMAIS PUBLIER : wrangler-account.json
+# contient l'identifiant du compte Cloudflare et son nom, qui est une adresse
+# email personnelle. wrangler écrit aussi des fichiers temporaires ici
+# PENDANT le déploiement, donc ils entrent dans la liste des assets du même
+# coup — d'où l'exclusion du dossier entier et non de fichiers nommés.
+.wrangler/

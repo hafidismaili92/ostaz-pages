@@ -1,0 +1,6 @@
+# État local de wrangler : cache du compte, fichiers temporaires de
+# déploiement. Contient l'identifiant du compte Cloudflare et son nom.
+.wrangler/
+
+# Au cas où une dépendance serait ajoutée un jour.
+node_modules/
