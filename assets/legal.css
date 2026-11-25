@@ -1,0 +1,133 @@
+/*
+  Feuille partagée par les quatre versions linguistiques de la page de
+  suppression de compte. Une seule source : une correction de style se fait
+  ici et vaut pour fr, en, es et ar.
+
+  Les marges internes utilisent des propriétés logiques
+  (padding-inline-start) pour que l'arabe se dispose correctement en RTL sans
+  règle supplémentaire.
+*/
+
+:root {
+  --bleu: #2743a6;
+  --encre: #1e2a44;
+  --encre-douce: #4a5878;
+  --papier: #faf6ee;
+  --carte: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem 4rem;
+  background: var(--papier);
+  color: var(--encre);
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.65;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.marque {
+  color: var(--bleu);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.carte {
+  background: var(--carte);
+  border: 1px solid rgba(30, 42, 68, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.carte h2 {
+  margin-top: 0;
+}
+
+ol,
+ul {
+  padding-inline-start: 1.25rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+.note {
+  color: var(--encre-douce);
+  font-size: 0.92rem;
+}
+
+code {
+  background: rgba(39, 67, 166, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 5px;
+}
+
+a {
+  color: var(--bleu);
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+}
+
+/* Sélecteur de langue ------------------------------------------------- */
+
+.langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.langs a {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid rgba(39, 67, 166, 0.25);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.langs a[aria-current="page"] {
+  background: var(--bleu);
+  border-color: var(--bleu);
+  color: #fff;
+}
+
+/* Fragments toujours lus de gauche à droite : identifiant de l'app,
+   adresses email. Sans cela, la ponctuation se déplace en contexte RTL. */
+code,
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* L'arabe respire mal avec l'interligne latin. */
+html[lang="ar"] body {
+  line-height: 1.9;
+}
