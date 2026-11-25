@@ -1,0 +1,6 @@
+# Les sources de génération ne sont pas des pages : source.html contient le
+# français brut, et son indexation ferait doublon avec /index.html.
+User-agent: *
+Disallow: /_i18n/
+
+Sitemap: https://profkit.hafidonline.org/sitemap.xml

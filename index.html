@@ -371,7 +371,9 @@ footer{ padding:64px 0 40px; border-top:1px solid rgb(var(--ink)/.08); }
 .foot-col a:hover{ color: rgb(var(--pen)); }
 .foot-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; padding-top:28px; border-top:1px solid rgb(var(--ink)/.08); font-size:.82rem; color: rgb(var(--ink-faint)); }
 .foot-langs{ display:flex; gap:14px; }
-.foot-langs span{ cursor:default; }
+.foot-langs a{ color: rgb(var(--ink-faint)); text-decoration:none; font-weight:700; transition: color .2s ease; }
+.foot-langs a:hover{ color: rgb(var(--margin)); }
+.foot-langs a[aria-current="page"]{ color: rgb(var(--margin)); }
 
 /* ---------------- reveal utility ---------------- */
 [data-reveal]{ opacity:0; transform: translateY(24px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); }
@@ -786,14 +788,14 @@ footer{ padding:64px 0 40px; border-top:1px solid rgb(var(--ink)/.08); }
           <h4>Légal</h4>
           <a href="#">Confidentialité</a>
           <a href="#">Conditions d'utilisation</a>
-          <a href="suppression-compte.html">Supprimer mon compte</a>
+          <a href="/suppression-compte">Supprimer mon compte</a>
           <a href="mailto:profkit-contact@hafidonline.org">Contact</a>
         </div>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 ProfKit. Fait avec 📓 pour les enseignants.</span>
-      <div class="foot-langs"><span>FR</span><span>EN</span><span>AR</span><span>ES</span></div>
+      <div class="foot-langs"><a href="/" hreflang="fr" aria-current="page">FR</a><a href="/en/" hreflang="en">EN</a><a href="/es/" hreflang="es">ES</a><a href="/ar/" hreflang="ar">AR</a></div>
     </div>
   </div>
 </footer>

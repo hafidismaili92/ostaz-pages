@@ -7,27 +7,62 @@ que du HTML statique — le code de l'application reste dans le dépôt `ostaz`.
 ## Arborescence
 
 ```
-/index.html                     présentation (français uniquement)
+/_i18n/source.html              SOURCE de la présentation (FR) — la seule à éditer
+/_i18n/strings.json             dictionnaire fr → en/es/ar
+/_i18n/build.py                 générateur
+
+/index.html                     présentation — FR   ┐
+/en/index.html                  EN                  │ GÉNÉRÉS
+/es/index.html                  ES                  │ ne pas éditer
+/ar/index.html                  AR (RTL)            ┘
+
 /suppression-compte.html        suppression de compte — FR (page par défaut)
-/en/suppression-compte.html     EN
-/es/suppression-compte.html     ES
-/ar/suppression-compte.html     AR (RTL)
+/en/suppression-compte.html     EN                  ┐ écrits à la main,
+/es/suppression-compte.html     ES                  │ une page par langue
+/ar/suppression-compte.html     AR (RTL)            ┘
 /assets/legal.css               feuille partagée par les quatre
+
+/robots.txt                     exclut /_i18n/ de l'indexation
+/sitemap.xml                    8 URL + alternates hreflang
 ```
+
+Deux régimes, et c'est volontaire : la présentation est **générée** depuis une
+source unique, parce que sa maquette de 84 Ko serait ingérable en quadruple.
+Les pages de suppression sont **écrites à la main**, parce qu'une page à
+portée légale doit pouvoir être relue mot à mot sans passer par un script.
 
 Le nom de fichier est identique dans les quatre langues : le sélecteur de
 langue est donc le même bloc dans chaque page, avec des chemins absolus
 depuis la racine du site.
 
+### Les URL servies n'ont pas d'extension
+
+Cloudflare Pages **redirige `/x.html` vers `/x`** (307). Les liens internes
+visent donc la forme sans extension, celle qui répond `200` directement :
+
+```
+https://profkit.hafidonline.org/suppression-compte
+https://profkit.hafidonline.org/en/suppression-compte
+https://profkit.hafidonline.org/es/suppression-compte
+https://profkit.hafidonline.org/ar/suppression-compte
+```
+
+Les deux formes restent accessibles — la variante `.html` passe simplement
+par une redirection. En ajoutant un lien, écrire la forme sans extension.
+
 ## La page de suppression de compte
 
 C'est la seule page à portée légale : Google Play exige que la procédure soit
-consultable **sans installer l'application**. Son URL se déclare dans la Play
+consultable **sans installer l'application**. URL à déclarer dans la Play
 Console, section « Suppression des données » :
 
 ```
-https://<domaine>/suppression-compte.html
+https://profkit.hafidonline.org/suppression-compte
 ```
+
+Sans extension : c'est la forme qui répond `200`. Une fois déclarée, **ne
+plus la renommer** — Google teste l'URL périodiquement, et une 404 sur la
+procédure de suppression est un motif de suspension.
 
 Les quatre langues reprennent celles de l'app (`src/i18n/locales/`). Les
 libellés d'interface cités dans les instructions — « Réglages » /
@@ -70,25 +105,42 @@ Elle sert aussi de contact pour la politique de confidentialité (C-02), les
 CGU (C-08) et le contact développeur de la Play Console — qui est **affiché
 publiquement** sur la fiche de l'app.
 
-## Travaux restants
+## La page de présentation
 
-### `index.html` n'existe qu'en français
+### Modifier le texte
 
-L'app est en quatre langues, la page de présentation en une seule. Ce n'est
-pas bloquant pour publier — Google n'exige rien sur la langue de la page de
-présentation — mais c'est incohérent pour un lancement international.
+Tout se passe dans `_i18n/` :
 
-Traduire 86 Ko de texte commercial est un travail de contenu, pas de code.
-Deux approches, à choisir avant de commencer :
+1. écrire le **français** dans `_i18n/source.html` ;
+2. `python _i18n/build.py` ;
+3. le script liste les segments sans traduction et **sort en erreur** — les
+   ajouter dans `_i18n/strings.json`, puis relancer.
 
-1. **Quatre fichiers statiques**, comme la page de suppression. Robuste et
-   bon pour le référencement, mais la copie commerciale évolue souvent et
-   chaque retouche devra être faite quatre fois.
-2. **Une page et un dictionnaire de traductions** chargé en JavaScript
-   (attributs `data-i18n`). Une seule page à maintenir, au prix d'un contenu
-   dépendant du JS — acceptable pour du marketing, à éviter pour du légal.
+Un texte non traduit reste en français plutôt que de disparaître : la page
+est toujours lisible, et l'oubli est signalé au lieu d'être silencieux. Le
+script est idempotent, on peut le relancer sans crainte.
 
-`index.html` provient de `landing/index-free.html` du dépôt applicatif — la
+Les clés de `strings.json` sont le **texte français exact**, entités
+comprises (`&amp;`). Le générateur remplace des **nœuds de texte entiers**,
+jamais des sous-chaînes : « Libre » ne peut donc pas corrompre « Don libre »,
+et rien ne peut être traduit à l'intérieur du CSS, du JavaScript ou d'un SVG.
+
+### L'arabe
+
+`ar/index.html` reçoit en plus, injecté par le générateur :
+
+- **IBM Plex Sans Arabic**, celle de l'application. Fraunces, Caveat et
+  Source Serif 4 ne contiennent aucun glyphe arabe : sans substitution, la
+  page tomberait sur la police serif par défaut du système.
+- **sept règles `[dir="rtl"]`** qui inversent les seules propriétés à
+  direction physique de la feuille principale (soulignés du menu, filet de
+  marge, cartes flottantes, étiquettes des fonctionnalités, boutons de
+  téléchargement). Tout le reste est symétrique ou géré par flexbox, qui suit
+  déjà `dir`.
+
+### Origine
+
+La source provient de `landing/index-free.html` du dépôt applicatif — la
 variante **sans offre Premium**. C'est celle qui décrit la réalité de l'app :
 `monetization_mode` vaut `free` par défaut et aucune intégration de paiement
 n'existe. L'autre variante (Premium à 29 DH/mois) n'est volontairement pas

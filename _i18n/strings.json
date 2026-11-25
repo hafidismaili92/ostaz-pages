@@ -1,0 +1,520 @@
+{
+  "_lisez-moi": [
+    "Dictionnaire de la page de présentation. Les clés sont le texte FRANÇAIS",
+    "exact tel qu'il apparaît dans _i18n/source.html — espaces insécables et",
+    "entités comprises (&amp;). Le générateur remplace des NŒUDS DE TEXTE",
+    "entiers, jamais des sous-chaînes : aucune collision possible entre un",
+    "segment court et un segment long qui le contient.",
+    "Pour ajouter du texte : écrire le français dans source.html, lancer",
+    "python _i18n/build.py, et le script listera les segments sans traduction."
+  ],
+
+  "text": {
+    "ProfKit — Le carnet numérique de l'enseignant": {
+      "en": "ProfKit — The teacher's digital register",
+      "es": "ProfKit — El cuaderno digital del docente",
+      "ar": "ProfKit — دفتر المدرّس الرقمي"
+    },
+    "ProfKit": { "en": "ProfKit", "es": "ProfKit", "ar": "ProfKit" },
+    "Fonctionnalités": { "en": "Features", "es": "Funciones", "ar": "الميزات" },
+    "Comment ça marche": { "en": "How it works", "es": "Cómo funciona", "ar": "كيف يعمل" },
+    "Tarifs": { "en": "Pricing", "es": "Precios", "ar": "الأسعار" },
+    "Avis": { "en": "Reviews", "es": "Opiniones", "ar": "آراء" },
+    "Télécharger": { "en": "Download", "es": "Descargar", "ar": "تحميل" },
+    "Nouveau · disponible sur mobile": {
+      "en": "New · available on mobile",
+      "es": "Nuevo · disponible en móvil",
+      "ar": "جديد · متوفّر على الهاتف"
+    },
+    "Le carnet de classe,": {
+      "en": "The class register,",
+      "es": "El cuaderno de clase,",
+      "ar": "دفتر القسم،"
+    },
+    "réinventé": { "en": "reinvented", "es": "reinventado", "ar": "أُعيد ابتكاره" },
+    "pour vous.": { "en": "for you.", "es": "para ti.", "ar": "من أجلك." },
+    "ProfKit remplace le cahier, les feuilles d'appel volantes et les tableurs de notes par une seule appli claire — pensée par et pour les enseignants.": {
+      "en": "ProfKit replaces the notebook, the loose attendance sheets and the grade spreadsheets with a single clear app — designed by teachers, for teachers.",
+      "es": "ProfKit sustituye el cuaderno, las hojas de asistencia sueltas y las hojas de cálculo de notas por una sola aplicación clara, pensada por y para docentes.",
+      "ar": "يُغني ProfKit عن الدفتر وأوراق الحضور المتناثرة وجداول النقط، ويجمعها في تطبيق واحد واضح، صُمّم بأيدي مدرّسين ومن أجلهم."
+    },
+    "Voir comment ça marche": {
+      "en": "See how it works",
+      "es": "Ver cómo funciona",
+      "ar": "شاهد كيف يعمل"
+    },
+    "★★★★★": { "en": "★★★★★", "es": "★★★★★", "ar": "★★★★★" },
+    "Conçu avec des enseignants réels · gratuit, sans carte bancaire": {
+      "en": "Built with real teachers · free, no credit card",
+      "es": "Creado con docentes reales · gratis, sin tarjeta bancaria",
+      "ar": "صُمّم بمشاركة مدرّسين حقيقيين · مجاني، بدون بطاقة بنكية"
+    },
+
+    "3B": { "en": "3B", "es": "3B", "ar": "3ب" },
+    "3ème B · Mathématiques": {
+      "en": "Class 3B · Mathematics",
+      "es": "Clase 3.º B · Matemáticas",
+      "ar": "القسم الثالث ب · الرياضيات"
+    },
+    "28 élèves": { "en": "28 students", "es": "28 alumnos", "ar": "28 تلميذًا" },
+    "92% présents": { "en": "92% present", "es": "92% presentes", "ar": "92% حاضرون" },
+    "Amine Alaoui": { "en": "Amine Alaoui", "es": "Amine Alaoui", "ar": "أمين العلوي" },
+    "Présent": { "en": "Present", "es": "Presente", "ar": "حاضر" },
+    "Sara Bennani": { "en": "Sara Bennani", "es": "Sara Bennani", "ar": "سارة بناني" },
+    "Youssef El Idrissi": {
+      "en": "Youssef El Idrissi",
+      "es": "Youssef El Idrissi",
+      "ar": "يوسف الإدريسي"
+    },
+    "Retard": { "en": "Late", "es": "Retraso", "ar": "متأخر" },
+    "Nour Chraibi": { "en": "Nour Chraibi", "es": "Nour Chraibi", "ar": "نور الشرايبي" },
+    "Absent": { "en": "Absent", "es": "Ausente", "ar": "غائب" },
+    "Moyenne de classe": {
+      "en": "Class average",
+      "es": "Media de la clase",
+      "ar": "معدّل القسم"
+    },
+    "Assiduité parfaite": {
+      "en": "Perfect attendance",
+      "es": "Asistencia perfecta",
+      "ar": "حضور كامل"
+    },
+    "Badge débloqué": {
+      "en": "Badge unlocked",
+      "es": "Insignia desbloqueada",
+      "ar": "شارة مُحقَّقة"
+    },
+
+    "Tout votre métier, dans une seule appli": {
+      "en": "Your whole job, in a single app",
+      "es": "Toda tu profesión, en una sola app",
+      "ar": "عملك كلّه في تطبيق واحد"
+    },
+    "De la rentrée au bulletin final — ProfKit couvre chaque geste du quotidien enseignant, sans jargon ni surcharge.": {
+      "en": "From the first day of term to the final report card — ProfKit covers every daily task of a teacher, with no jargon and no clutter.",
+      "es": "Desde el inicio de curso hasta el boletín final: ProfKit cubre cada gesto del día a día docente, sin jerga ni sobrecarga.",
+      "ar": "من بداية السنة إلى بطاقة النتائج الأخيرة — يغطّي ProfKit كلّ تفاصيل يوم المدرّس، بلا مصطلحات معقّدة ولا حشو."
+    },
+    "Gratuit": { "en": "Free", "es": "Gratis", "ar": "مجاني" },
+    "Classes &amp; élèves": {
+      "en": "Classes &amp; students",
+      "es": "Clases y alumnos",
+      "ar": "الأقسام والتلاميذ"
+    },
+    "Créez vos classes, importez vos listes en un copier-coller, ou dupliquez une classe entière pour la rentrée suivante.": {
+      "en": "Create your classes, import your lists with a copy-paste, or duplicate a whole class for next year.",
+      "es": "Crea tus clases, importa tus listas con un copiar y pegar, o duplica una clase entera para el curso siguiente.",
+      "ar": "أنشئ أقسامك، واستورد قوائمك بنسخ ولصق، أو انسخ قسمًا كاملًا للسنة المقبلة."
+    },
+    "Appel &amp; séances": {
+      "en": "Attendance &amp; sessions",
+      "es": "Asistencia y sesiones",
+      "ar": "الحضور والحصص"
+    },
+    "Créez une séance en un tap, notez présent, absent, retard ou excusé. Historique complet, consultable à tout moment.": {
+      "en": "Create a session in one tap, then mark present, absent, late or excused. Full history, available at any time.",
+      "es": "Crea una sesión con un toque y marca presente, ausente, retraso o justificado. Historial completo, consultable en cualquier momento.",
+      "ar": "أنشئ حصّة بلمسة واحدة، وسجّل حاضرًا أو غائبًا أو متأخرًا أو بعذر. سجلّ كامل يمكن الرجوع إليه في أيّ وقت."
+    },
+    "Notes &amp; heatmap": {
+      "en": "Grades &amp; heatmap",
+      "es": "Notas y mapa de calor",
+      "ar": "النقط والخريطة الحرارية"
+    },
+    "Saisissez vos évaluations et visualisez les résultats en carte de chaleur — un coup d'œil suffit pour repérer qui a besoin d'aide.": {
+      "en": "Enter your assessments and see the results as a heatmap — one glance is enough to spot who needs help.",
+      "es": "Introduce tus evaluaciones y visualiza los resultados en un mapa de calor: un vistazo basta para detectar quién necesita ayuda.",
+      "ar": "أدخل فروضك واعرض النتائج في خريطة حرارية — نظرة واحدة تكفي لمعرفة من يحتاج المساعدة."
+    },
+    "Emploi du temps": { "en": "Timetable", "es": "Horario", "ar": "جدول الحصص" },
+    "Grille hebdomadaire ou vue « aujourd'hui » avec statut automatique des cours : à venir, en cours, terminé.": {
+      "en": "A weekly grid, or a “today” view with automatic lesson status: upcoming, in progress, finished.",
+      "es": "Cuadrícula semanal o vista «hoy» con estado automático de las clases: próxima, en curso, terminada.",
+      "ar": "شبكة أسبوعية أو عرض «اليوم» مع حالة تلقائية للحصص: قادمة، جارية، منتهية."
+    },
+    "Contact parents": {
+      "en": "Parent contact",
+      "es": "Contacto con las familias",
+      "ar": "التواصل مع الأولياء"
+    },
+    "Message WhatsApp ou SMS pré-rempli en un tap pour signaler une absence, un retard ou féliciter un élève.": {
+      "en": "A pre-filled WhatsApp or SMS message in one tap, to report an absence or a late arrival, or to congratulate a student.",
+      "es": "Mensaje de WhatsApp o SMS prerrellenado con un toque para avisar de una ausencia, un retraso o felicitar a un alumno.",
+      "ar": "رسالة واتساب أو SMS جاهزة بلمسة واحدة للإبلاغ عن غياب أو تأخّر، أو لتهنئة تلميذ."
+    },
+    "Rapports &amp; classement": {
+      "en": "Reports &amp; ranking",
+      "es": "Informes y clasificación",
+      "ar": "التقارير والترتيب"
+    },
+    "Moyennes pondérées, taux de présence, classement de classe — imprimables et exportables en un clic.": {
+      "en": "Weighted averages, attendance rates, class ranking — printable and exportable in one click.",
+      "es": "Medias ponderadas, tasas de asistencia, clasificación de la clase: imprimibles y exportables con un clic.",
+      "ar": "معدّلات مرجّحة، ونسب الحضور، وترتيب القسم — قابلة للطبع والتصدير بنقرة واحدة."
+    },
+    "Devoirs ciblés": {
+      "en": "Targeted homework",
+      "es": "Tareas selectivas",
+      "ar": "واجبات موجّهة"
+    },
+    "Assignez un devoir à toute la classe ou seulement à quelques élèves, et suivez qui a rendu quoi.": {
+      "en": "Assign homework to a whole class or to just a few students, and track who handed in what.",
+      "es": "Asigna una tarea a toda la clase o solo a algunos alumnos y controla quién ha entregado qué.",
+      "ar": "أسنِد واجبًا إلى القسم بأكمله أو إلى بعض التلاميذ فقط، وتابع من سلّم ماذا."
+    },
+    "Registre de cours": {
+      "en": "Lesson book",
+      "es": "Cuaderno de clase",
+      "ar": "دفتر النصوص"
+    },
+    "Un curriculum réutilisable par matière (chapitres, thèmes) que vous affectez à chaque classe avec son propre avancement.": {
+      "en": "A reusable curriculum per subject (chapters, topics) that you assign to each class with its own progress.",
+      "es": "Un currículo reutilizable por materia (capítulos, temas) que asignas a cada clase con su propio avance.",
+      "ar": "منهج قابل لإعادة الاستخدام لكلّ مادة (الدروس، المحاور) تُسنده إلى كلّ قسم مع تقدّمه الخاص."
+    },
+
+    "En pratique": { "en": "In practice", "es": "En la práctica", "ar": "عمليًّا" },
+    "Trois gestes qui changent votre semaine": {
+      "en": "Three gestures that change your week",
+      "es": "Tres gestos que cambian tu semana",
+      "ar": "ثلاث حركات تغيّر أسبوعك"
+    },
+    "01 — d'un regard": {
+      "en": "01 — at a glance",
+      "es": "01 — de un vistazo",
+      "ar": "01 — بنظرة واحدة"
+    },
+    "Repérez les élèves en difficulté d'un coup d'œil": {
+      "en": "Spot struggling students at a glance",
+      "es": "Detecta de un vistazo a los alumnos con dificultades",
+      "ar": "اكتشف التلاميذ المتعثّرين بنظرة واحدة"
+    },
+    "La heatmap des notes colore chaque résultat selon votre seuil de réussite. Vert foncé, vert clair, rouge clair, rouge foncé — le niveau de la classe saute aux yeux, sans calcul.": {
+      "en": "The grade heatmap colours each result against your pass threshold. Dark green, light green, light red, dark red — the level of the class leaps out, with no calculation.",
+      "es": "El mapa de calor colorea cada resultado según tu umbral de aprobado. Verde oscuro, verde claro, rojo claro, rojo oscuro: el nivel de la clase salta a la vista, sin calcular nada.",
+      "ar": "تلوّن الخريطة الحرارية كلّ نتيجة حسب عتبة النجاح التي تحدّدها. أخضر غامق، أخضر فاتح، أحمر فاتح، أحمر غامق — مستوى القسم يظهر فورًا، بلا أيّ حساب."
+    },
+    "Éval.1": { "en": "Test 1", "es": "Eval. 1", "ar": "فرض 1" },
+    "Éval.2": { "en": "Test 2", "es": "Eval. 2", "ar": "فرض 2" },
+    "Éval.3": { "en": "Test 3", "es": "Eval. 3", "ar": "فرض 3" },
+    "Éval.4": { "en": "Test 4", "es": "Eval. 4", "ar": "فرض 4" },
+    "Amine": { "en": "Amine", "es": "Amine", "ar": "أمين" },
+    "Sara": { "en": "Sara", "es": "Sara", "ar": "سارة" },
+    "Youssef": { "en": "Youssef", "es": "Youssef", "ar": "يوسف" },
+    "Nour": { "en": "Nour", "es": "Nour", "ar": "نور" },
+
+    "02 — en un tap": {
+      "en": "02 — in one tap",
+      "es": "02 — con un toque",
+      "ar": "02 — بلمسة واحدة"
+    },
+    "Prévenez un parent sans quitter l'appel": {
+      "en": "Notify a parent without leaving the register",
+      "es": "Avisa a una familia sin salir de la lista",
+      "ar": "أبلِغ وليًّا دون مغادرة ورقة الحضور"
+    },
+    "Un élève marqué absent ou en retard ? Le bouton de contact ouvre directement WhatsApp ou SMS avec un message déjà rédigé — vous n'avez plus qu'à l'envoyer.": {
+      "en": "A student marked absent or late? The contact button opens WhatsApp or SMS directly, with the message already written — all you have to do is send it.",
+      "es": "¿Un alumno marcado como ausente o con retraso? El botón de contacto abre WhatsApp o SMS directamente, con el mensaje ya redactado: solo tienes que enviarlo.",
+      "ar": "تلميذ مسجَّل غائبًا أو متأخّرًا؟ زرّ التواصل يفتح واتساب أو الرسائل مباشرة برسالة مكتوبة سلفًا — لا يبقى لك إلّا إرسالها."
+    },
+    "Bonjour, nous vous informons que Youssef était en retard au cours de 8h ce matin. Cordialement, l'équipe pédagogique.": {
+      "en": "Hello, we are letting you know that Youssef arrived late to the 8 a.m. lesson this morning. Kind regards, the teaching team.",
+      "es": "Buenos días, le informamos de que Youssef llegó con retraso a la clase de las 8:00 de esta mañana. Un saludo, el equipo docente.",
+      "ar": "تحيّة طيّبة، نُعلمكم أنّ يوسف تأخّر عن حصّة الثامنة صباح اليوم. مع التحيّات، الفريق التربوي."
+    },
+    "Envoyé via WhatsApp · 08:14": {
+      "en": "Sent via WhatsApp · 08:14",
+      "es": "Enviado por WhatsApp · 08:14",
+      "ar": "أُرسلت عبر واتساب · 08:14"
+    },
+
+    "03 — sans y penser": {
+      "en": "03 — without thinking about it",
+      "es": "03 — sin pensarlo",
+      "ar": "03 — دون تفكير"
+    },
+    "Votre semaine, déjà organisée": {
+      "en": "Your week, already organised",
+      "es": "Tu semana, ya organizada",
+      "ar": "أسبوعك، منظَّم مسبقًا"
+    },
+    "La grille horaire affiche vos créneaux par classe et matière. La vue « aujourd'hui » indique automatiquement ce qui est à venir, en cours, ou terminé — sans pointer manuellement chaque cours.": {
+      "en": "The timetable grid shows your slots by class and subject. The “today” view automatically indicates what is upcoming, in progress or finished — with no need to tick off each lesson by hand.",
+      "es": "La cuadrícula horaria muestra tus franjas por clase y materia. La vista «hoy» indica automáticamente qué está por venir, en curso o terminado, sin marcar cada clase a mano.",
+      "ar": "تعرض شبكة الجدول حصصك حسب القسم والمادة. وعرض «اليوم» يحدّد تلقائيًا ما هو قادم أو جارٍ أو منتهٍ — دون تسجيل كلّ حصّة يدويًا."
+    },
+    "Lun": { "en": "Mon", "es": "Lun", "ar": "إث" },
+    "Mar": { "en": "Tue", "es": "Mar", "ar": "ثل" },
+    "Mer": { "en": "Wed", "es": "Mié", "ar": "أر" },
+    "Jeu": { "en": "Thu", "es": "Jue", "ar": "خم" },
+    "Ven": { "en": "Fri", "es": "Vie", "ar": "جم" },
+    "8h": { "en": "8 AM", "es": "8:00", "ar": "8:00" },
+    "10h": { "en": "10 AM", "es": "10:00", "ar": "10:00" },
+    "14h": { "en": "2 PM", "es": "14:00", "ar": "14:00" },
+
+    "100% gratuit. Pour de vrai.": {
+      "en": "100% free. Really.",
+      "es": "100% gratis. De verdad.",
+      "ar": "مجاني 100%. فعلًا."
+    },
+    "ProfKit est entièrement gratuit, sans limite de classes ni d'élèves. Si l'application vous fait gagner du temps, un don libre permet de soutenir son développement — jamais une obligation.": {
+      "en": "ProfKit is completely free, with no limit on classes or students. If the app saves you time, an optional donation helps support its development — never an obligation.",
+      "es": "ProfKit es totalmente gratuito, sin límite de clases ni de alumnos. Si la aplicación te ahorra tiempo, una donación libre ayuda a sostener su desarrollo, nunca una obligación.",
+      "ar": "ProfKit مجاني بالكامل، بلا حدّ لعدد الأقسام أو التلاميذ. وإن وفّر عليك وقتًا، فالتبرّع الحرّ يساعد على تطويره — دون أيّ إلزام."
+    },
+    "Toutes les fonctionnalités, pour tous les enseignants.": {
+      "en": "Every feature, for every teacher.",
+      "es": "Todas las funciones, para todos los docentes.",
+      "ar": "كلّ الميزات، لكلّ المدرّسين."
+    },
+    "DH / toujours": { "en": "MAD / forever", "es": "DH / para siempre", "ar": "درهم / للأبد" },
+    "Commencer gratuitement": {
+      "en": "Start for free",
+      "es": "Empezar gratis",
+      "ar": "ابدأ مجانًا"
+    },
+    "Don libre": { "en": "Optional donation", "es": "Donación libre", "ar": "تبرّع حرّ" },
+    "Vous préférez soutenir le projet à votre rythme ?": {
+      "en": "Would you rather support the project at your own pace?",
+      "es": "¿Prefieres apoyar el proyecto a tu ritmo?",
+      "ar": "تفضّل دعم المشروع على وتيرتك؟"
+    },
+    "Libre": { "en": "Your choice", "es": "Libre", "ar": "حرّ" },
+    "montant": { "en": "amount", "es": "importe", "ar": "المبلغ" },
+    "Faire un don": { "en": "Donate", "es": "Donar", "ar": "تبرّع" },
+    "Aucune carte bancaire requise · vos données restent les vôtres": {
+      "en": "No credit card required · your data stays yours",
+      "es": "Sin tarjeta bancaria · tus datos siguen siendo tuyos",
+      "ar": "لا حاجة إلى بطاقة بنكية · بياناتك تبقى ملكك"
+    },
+
+    "Ils en parlent": { "en": "What they say", "es": "Lo que dicen", "ar": "ماذا يقولون" },
+    "Des enseignants, pour des enseignants": {
+      "en": "Teachers, for teachers",
+      "es": "Docentes, para docentes",
+      "ar": "مدرّسون، من أجل المدرّسين"
+    },
+    "\"": { "en": "\"", "es": "\"", "ar": "\"" },
+    "Je faisais l'appel sur papier depuis 12 ans. Avec ProfKit j'ai tout numérisé en une soirée, et le reporting me fait gagner un temps fou au conseil de classe.": {
+      "en": "I had been taking the register on paper for 12 years. With ProfKit I digitised everything in one evening, and the reporting saves me a huge amount of time at the class council.",
+      "es": "Llevaba 12 años pasando lista en papel. Con ProfKit lo digitalicé todo en una tarde, y los informes me ahorran muchísimo tiempo en la junta de evaluación.",
+      "ar": "كنت أسجّل الحضور على الورق منذ 12 سنة. مع ProfKit رقّمت كلّ شيء في ليلة واحدة، والتقارير توفّر عليّ وقتًا هائلًا في مجلس القسم."
+    },
+    "L.": { "en": "L.", "es": "L.", "ar": "ل." },
+    "Latifa B.": { "en": "Latifa B.", "es": "Latifa B.", "ar": "لطيفة ب." },
+    "Professeure de Mathématiques": {
+      "en": "Mathematics teacher",
+      "es": "Profesora de Matemáticas",
+      "ar": "مدرّسة الرياضيات"
+    },
+    "La heatmap des notes m'a permis de repérer trois élèves en décrochage bien avant le bulletin. C'est devenu indispensable dans ma routine.": {
+      "en": "The grade heatmap let me spot three students falling behind well before the report card. It has become essential in my routine.",
+      "es": "El mapa de calor me permitió detectar a tres alumnos descolgados mucho antes del boletín. Se ha vuelto indispensable en mi rutina.",
+      "ar": "ساعدتني الخريطة الحرارية على كشف ثلاثة تلاميذ متعثّرين قبل بطاقة النتائج بوقت طويل. أصبحت لا غنى عنها في عملي."
+    },
+    "K.": { "en": "K.", "es": "K.", "ar": "ك." },
+    "Karim T.": { "en": "Karim T.", "es": "Karim T.", "ar": "كريم ت." },
+    "Professeur de Physique-Chimie": {
+      "en": "Physics and chemistry teacher",
+      "es": "Profesor de Física y Química",
+      "ar": "مدرّس الفيزياء والكيمياء"
+    },
+    "Le contact parent en un tap a changé ma relation avec les familles. Fini les cahiers de liaison perdus dans le sac.": {
+      "en": "One-tap parent contact has changed my relationship with families. No more homework diaries lost at the bottom of a bag.",
+      "es": "El contacto con las familias con un solo toque ha cambiado mi relación con ellas. Se acabaron las agendas perdidas en la mochila.",
+      "ar": "غيّر التواصل مع الأولياء بلمسة واحدة علاقتي بالأسر. لا مزيد من دفاتر المراسلة الضائعة في المحفظة."
+    },
+    "S.": { "en": "S.", "es": "S.", "ar": "س." },
+    "Salma R.": { "en": "Salma R.", "es": "Salma R.", "ar": "سلمى ر." },
+    "Institutrice, primaire": {
+      "en": "Primary school teacher",
+      "es": "Maestra de primaria",
+      "ar": "مدرّسة في التعليم الابتدائي"
+    },
+
+    "Votre carnet de classe vous attend": {
+      "en": "Your class register is waiting for you",
+      "es": "Tu cuaderno de clase te espera",
+      "ar": "دفتر قسمك ينتظرك"
+    },
+    "Créez votre compte en moins de deux minutes et retrouvez vos classes, où que vous soyez — même sans connexion.": {
+      "en": "Create your account in under two minutes and find your classes wherever you are — even offline.",
+      "es": "Crea tu cuenta en menos de dos minutos y recupera tus clases donde estés, incluso sin conexión.",
+      "ar": "أنشئ حسابك في أقلّ من دقيقتين، واعثر على أقسامك أينما كنت — حتى دون اتصال بالإنترنت."
+    },
+    "Télécharger sur": { "en": "Download on the", "es": "Descargar en", "ar": "حمّل من" },
+    "App Store": { "en": "App Store", "es": "App Store", "ar": "App Store" },
+    "Disponible sur": { "en": "Available on", "es": "Disponible en", "ar": "متوفّر على" },
+    "Google Play": { "en": "Google Play", "es": "Google Play", "ar": "Google Play" },
+    "Ou utilisez": { "en": "Or use", "es": "O usa", "ar": "أو استخدم" },
+    "ProfKit Web": { "en": "ProfKit Web", "es": "ProfKit Web", "ar": "ProfKit Web" },
+
+    "Le carnet numérique des enseignants. Classes, appel, notes, devoirs et bulletins — tout au même endroit.": {
+      "en": "The teachers' digital register. Classes, attendance, grades, homework and report cards — all in one place.",
+      "es": "El cuaderno digital de los docentes. Clases, asistencia, notas, tareas y boletines, todo en un mismo lugar.",
+      "ar": "الدفتر الرقمي للمدرّسين. الأقسام والحضور والنقط والواجبات وبطاقات النتائج — كلّها في مكان واحد."
+    },
+    "Produit": { "en": "Product", "es": "Producto", "ar": "المنتج" },
+    "Ressources": { "en": "Resources", "es": "Recursos", "ar": "موارد" },
+    "Centre d'aide": { "en": "Help centre", "es": "Centro de ayuda", "ar": "مركز المساعدة" },
+    "Guide de démarrage": {
+      "en": "Getting started guide",
+      "es": "Guía de inicio",
+      "ar": "دليل البداية"
+    },
+    "Nouveautés": { "en": "What's new", "es": "Novedades", "ar": "الجديد" },
+    "Légal": { "en": "Legal", "es": "Legal", "ar": "قانوني" },
+    "Confidentialité": { "en": "Privacy", "es": "Privacidad", "ar": "الخصوصية" },
+    "Conditions d'utilisation": {
+      "en": "Terms of use",
+      "es": "Condiciones de uso",
+      "ar": "شروط الاستخدام"
+    },
+    "Supprimer mon compte": {
+      "en": "Delete my account",
+      "es": "Eliminar mi cuenta",
+      "ar": "حذف حسابي"
+    },
+    "Contact": { "en": "Contact", "es": "Contacto", "ar": "اتصل بنا" },
+    "© 2026 ProfKit. Fait avec 📓 pour les enseignants.": {
+      "en": "© 2026 ProfKit. Made with 📓 for teachers.",
+      "es": "© 2026 ProfKit. Hecho con 📓 para docentes.",
+      "ar": "© 2026 ProfKit. صُنع بـ📓 من أجل المدرّسين."
+    },
+
+    "Multi-classes &amp; matières": {
+      "en": "Multiple classes &amp; subjects",
+      "es": "Varias clases y materias",
+      "ar": "أقسام ومواد متعدّدة"
+    },
+    "Appel, notes, devoirs, bulletins": {
+      "en": "Attendance, grades, homework, report cards",
+      "es": "Asistencia, notas, tareas, boletines",
+      "ar": "الحضور والنقط والواجبات وبطاقات النتائج"
+    },
+    "Classes &amp; élèves illimités": {
+      "en": "Unlimited classes &amp; students",
+      "es": "Clases y alumnos ilimitados",
+      "ar": "أقسام وتلاميذ بلا حدود"
+    },
+    "Emploi du temps &amp; registre de cours": {
+      "en": "Timetable &amp; lesson book",
+      "es": "Horario y cuaderno de clase",
+      "ar": "جدول الحصص ودفتر النصوص"
+    },
+    "Contact parents, rapports &amp; statistiques": {
+      "en": "Parent contact, reports &amp; statistics",
+      "es": "Contacto con familias, informes y estadísticas",
+      "ar": "التواصل مع الأولياء والتقارير والإحصائيات"
+    },
+    "Export CSV pour vos réunions pédagogiques": {
+      "en": "CSV export for your staff meetings",
+      "es": "Exportación CSV para tus reuniones de evaluación",
+      "ar": "تصدير CSV لاجتماعاتكم التربوية"
+    },
+    "Données privées &amp; sécurisées": {
+      "en": "Private &amp; secure data",
+      "es": "Datos privados y seguros",
+      "ar": "بيانات خاصة ومحميّة"
+    },
+    "Aucune donnée transite par un tiers": {
+      "en": "No data passes through a third party",
+      "es": "Ningún dato pasa por terceros",
+      "ar": "لا تمرّ أيّ بيانات عبر طرف ثالث"
+    },
+    "Fonctionne hors ligne": {
+      "en": "Works offline",
+      "es": "Funciona sin conexión",
+      "ar": "يعمل دون اتصال"
+    },
+    "FR · EN · AR · ES": {
+      "en": "FR · EN · AR · ES",
+      "es": "FR · EN · AR · ES",
+      "ar": "FR · EN · AR · ES"
+    },
+    "Seuil de réussite personnalisable par classe": {
+      "en": "Pass threshold configurable per class",
+      "es": "Umbral de aprobado configurable por clase",
+      "ar": "عتبة نجاح قابلة للتخصيص لكلّ قسم"
+    },
+    "Vue tableau adaptée au mobile": {
+      "en": "Table view designed for mobile",
+      "es": "Vista de tabla adaptada al móvil",
+      "ar": "عرض جدولي مهيّأ للهاتف"
+    },
+    "Modèles pour absence, retard, félicitations": {
+      "en": "Templates for absence, lateness, congratulations",
+      "es": "Plantillas para ausencia, retraso, felicitaciones",
+      "ar": "قوالب للغياب والتأخّر والتهنئة"
+    },
+    "Fonctionne avec l'appli WhatsApp installée": {
+      "en": "Works with the WhatsApp app installed",
+      "es": "Funciona con la app de WhatsApp instalada",
+      "ar": "يعمل مع تطبيق واتساب المثبَّت"
+    },
+    "Statut automatique basé sur l'horaire réel": {
+      "en": "Automatic status based on the real timetable",
+      "es": "Estado automático según el horario real",
+      "ar": "حالة تلقائية حسب التوقيت الفعلي"
+    },
+    "Marquage manuel « terminé » ou « annulé »": {
+      "en": "Manual “finished” or “cancelled” marking",
+      "es": "Marcado manual «terminado» o «cancelado»",
+      "ar": "تسجيل يدوي لـ«منتهية» أو «ملغاة»"
+    },
+    "Rappels locaux avant chaque cours": {
+      "en": "Local reminders before each lesson",
+      "es": "Recordatorios locales antes de cada clase",
+      "ar": "تنبيهات محلّية قبل كلّ حصّة"
+    },
+    "Contribuez au montant de votre choix": {
+      "en": "Contribute whatever amount you choose",
+      "es": "Contribuye con el importe que quieras",
+      "ar": "ساهم بالمبلغ الذي تختاره"
+    },
+    "Soutient le développement continu": {
+      "en": "Supports ongoing development",
+      "es": "Apoya el desarrollo continuo",
+      "ar": "يدعم التطوير المستمرّ"
+    },
+    "N'ajoute aucune fonctionnalité — l'appli reste identique": {
+      "en": "Adds no features — the app stays exactly the same",
+      "es": "No añade ninguna función: la app sigue siendo idéntica",
+      "ar": "لا يضيف أيّ ميزة — يبقى التطبيق كما هو"
+    },
+    "Télécharger l'application": {
+      "en": "Download the app",
+      "es": "Descargar la aplicación",
+      "ar": "تحميل التطبيق"
+    },
+    "iOS &amp; Android": {
+      "en": "iOS &amp; Android",
+      "es": "iOS y Android",
+      "ar": "iOS و Android"
+    }
+  },
+
+  "attrs": {
+    "Télécharger sur l'App Store": {
+      "en": "Download on the App Store",
+      "es": "Descargar en el App Store",
+      "ar": "حمّل من App Store"
+    },
+    "Disponible sur Google Play": {
+      "en": "Available on Google Play",
+      "es": "Disponible en Google Play",
+      "ar": "متوفّر على Google Play"
+    },
+    "Ouvrir la version web": {
+      "en": "Open the web version",
+      "es": "Abrir la versión web",
+      "ar": "افتح نسخة الويب"
+    },
+    "ProfKit : classes, appel, notes, devoirs, emploi du temps et bulletins — le carnet de l'enseignant, réinventé. 100% gratuit, don libre possible.": {
+      "en": "ProfKit: classes, attendance, grades, homework, timetable and report cards — the teacher's register, reinvented. 100% free, optional donation.",
+      "es": "ProfKit: clases, asistencia, notas, tareas, horario y boletines — el cuaderno del docente, reinventado. 100% gratis, donación libre.",
+      "ar": "ProfKit: الأقسام والحضور والنقط والواجبات وجدول الحصص وبطاقات النتائج — دفتر المدرّس من جديد. مجاني 100%، مع إمكانية التبرّع."
+    }
+  }
+}
