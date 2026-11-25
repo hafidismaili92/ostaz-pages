@@ -1,0 +1,26 @@
+{
+  // Configuration du Worker qui sert le site statique.
+  //
+  // Le projet Cloudflare est un Worker (commande de déploiement
+  // `npx wrangler deploy`), pas un projet Pages. Sans ce fichier, wrangler
+  // ne sait pas quoi publier et le build échoue — c'est ce qui bloquait.
+  //
+  // ⚠️ `name` DOIT correspondre exactement au nom du Worker existant dans le
+  // tableau de bord. Un nom différent créerait un SECOND Worker, et le
+  // domaine profkit.hafidonline.org resterait branché sur l'ancien.
+
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "profkit",
+  "compatibility_date": "2026-11-01",
+
+  "assets": {
+    // Le site est à la racine du dépôt. Ce qui ne doit pas être publié est
+    // listé dans .assetsignore, à côté de ce fichier.
+    "directory": "./"
+
+    // html_handling est laissé au défaut "auto-trailing-slash" : c'est lui
+    // qui sert /suppression-compte pour le fichier suppression-compte.html
+    // et redirige la forme .html vers celle-ci. Les liens internes du site
+    // visent déjà la forme canonique.
+  }
+}

@@ -74,22 +74,34 @@ change dans l'app, il change ici aussi.**
 
 Toute modification de fond doit être portée dans les **quatre** pages.
 
-## Déploiement Cloudflare Pages
+## Déploiement
 
-Aucune étape de build : ce sont des fichiers servis tels quels.
+Le site est servi par un **Worker Cloudflare avec assets statiques**, pas par
+un projet Pages. La distinction compte : le Worker se déploie avec
+`npx wrangler deploy`, qui exige un `wrangler.jsonc` dans le dépôt.
 
-| Réglage | Valeur |
+| Réglage du tableau de bord | Valeur |
 |---|---|
-| Framework preset | *None* |
-| Build command | *(vide)* |
-| Build output directory | `/` |
+| Git repository | `hafidismaili92/ostaz-pages` |
+| Production branch | `main` |
+| Build command | *(vide — rien à compiler)* |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | `/` |
 
-Chaque `git push` sur la branche par défaut redéploie le site.
+`wrangler.jsonc` déclare la racine du dépôt comme dossier d'assets, et
+`.assetsignore` en retire ce qui ne doit pas être servi (`_i18n/`, la
+configuration, ce README).
 
-Le domaine `hafidonline.org` est déjà à toi : autant brancher un sous-domaine
-(`profkit.hafidonline.org`) dans **Pages → Custom domains** plutôt que de
-rester sur `.pages.dev`. Plus crédible sur une fiche Play, et surtout l'URL
-déclarée à Google n'aura pas à changer ensuite.
+Le champ `name` de `wrangler.jsonc` **doit correspondre au nom du Worker
+existant**. Un nom différent créerait un second Worker, et
+`profkit.hafidonline.org` resterait branché sur l'ancien.
+
+Chaque `git push` sur `main` redéploie — à condition que le compte Git soit
+connecté. S'il se déconnecte, le tableau de bord affiche « This project is
+disconnected from your Git account » et les pushs ne déclenchent plus rien
+**sans aucune erreur visible** : le site continue simplement de servir
+l'ancienne version. C'est à vérifier en premier si une modification poussée
+n'apparaît pas en ligne.
 
 ## Adresse de contact
 

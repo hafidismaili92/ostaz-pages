@@ -1,0 +1,13 @@
+# Ce qui est dans le dépôt mais ne doit pas être servi.
+# Même syntaxe que .gitignore, lu par wrangler dans le dossier d'assets.
+
+# Sources de génération de la page de présentation. source.html ferait
+# doublon avec /index.html dans l'index des moteurs, et robots.txt ne peut
+# pas l'en empêcher : Cloudflare sert son propre robots.txt au niveau du
+# domaine, pas celui du projet.
+_i18n/
+
+# Configuration et documentation du dépôt : rien à publier.
+wrangler.jsonc
+.assetsignore
+README.md
