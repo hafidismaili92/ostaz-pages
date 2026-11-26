@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Les alternates hreflang sont déclarés ici plutôt que dans le <head> des huit
-  pages : un seul fichier à tenir à jour au lieu de huit, pour un effet
-  identique côté moteurs de recherche.
-
-  x-default désigne la version servie à un visiteur dont la langue n'est
-  couverte par aucune autre : le français, page par défaut du site.
-
-  À mettre à jour en ajoutant une page ou une langue.
--->
+<!-- Généré par _i18n/build.py. Ne pas éditer à la main. -->
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Page de présentation -->
   <url>
     <loc>https://profkit.hafidonline.org/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/"/>
@@ -21,7 +10,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/"/>
-    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://profkit.hafidonline.org/en/</loc>
@@ -47,8 +35,6 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/"/>
   </url>
-
-  <!-- Suppression de compte — URL déclarée à Google Play -->
   <url>
     <loc>https://profkit.hafidonline.org/suppression-compte</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/suppression-compte"/>
@@ -56,7 +42,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/suppression-compte"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/suppression-compte"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/suppression-compte"/>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://profkit.hafidonline.org/en/suppression-compte</loc>
@@ -81,5 +66,37 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/suppression-compte"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/suppression-compte"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/suppression-compte"/>
+  </url>
+  <url>
+    <loc>https://profkit.hafidonline.org/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profkit.hafidonline.org/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/confidentialite"/>
+  </url>
+  <url>
+    <loc>https://profkit.hafidonline.org/en/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profkit.hafidonline.org/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/confidentialite"/>
+  </url>
+  <url>
+    <loc>https://profkit.hafidonline.org/es/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profkit.hafidonline.org/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/confidentialite"/>
+  </url>
+  <url>
+    <loc>https://profkit.hafidonline.org/ar/confidentialite</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://profkit.hafidonline.org/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://profkit.hafidonline.org/en/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://profkit.hafidonline.org/es/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://profkit.hafidonline.org/ar/confidentialite"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://profkit.hafidonline.org/confidentialite"/>
   </url>
 </urlset>
